@@ -17,13 +17,17 @@ body {
 }
 
 #notice {
-  padding: 5px 20px;
+  padding: 5px 10px;
   background-color: #fff;
   opacity: 0.8;
 }
 
+#notice .message {
+  padding: 0 10px;
+}
+
 #notice .timestamp {
-  font-size: 70%;
+  font-size: 90%;
 }
 
 #stream {

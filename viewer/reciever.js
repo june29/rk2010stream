@@ -21,9 +21,10 @@ $(document).ready(function() {
     cutoff();
   }
 
-  var pusher = new Pusher("103f2d7ba59163142c42", "stream");
+  var stream = new Pusher("103f2d7ba59163142c42", "stream");
+  var notice = new Pusher("103f2d7ba59163142c42", "notice");
 
-  pusher.bind("twitter", function(message) {
+  stream.bind("twitter", function(message) {
     var data = message.data;
     var user = data.user;
 
@@ -54,7 +55,7 @@ $(document).ready(function() {
     }
   });
 
-  pusher.bind("irc", function(message) {
+  stream.bind("irc", function(message) {
     var data       = message.body;
     var nick       = data.nick;
     var text       = data.text;
@@ -72,5 +73,22 @@ $(document).ready(function() {
               .append(format(text)));
 
     prepend(div);
+  });
+
+  notice.bind("text", function(message) {
+    var data       = message.data;
+    var body       = data.body;
+    var updated_at = data.updated_at;
+
+    var div = $("#notice");
+
+    div.contents().remove();
+
+    div.append($("<span/>").hide()
+               .addClass("message")
+               .text(body).fadeIn(2000))
+       .append($("<span/>").hide()
+               .addClass("timestamp")
+               .text("(updated at: " + updated_at + ")").fadeIn(2000));
   });
 });
