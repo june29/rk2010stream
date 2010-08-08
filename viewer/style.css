@@ -22,6 +22,32 @@ body {
   opacity: 0.8;
 }
 
+#ustream {
+  padding: 10px 70px 0;
+  position: relative;
+}
+
+#explanation {
+  width: 400px;
+  height: 280px;
+  padding: 20px;
+  background-color: #fff;
+  opacity: 0.8;
+  position: absolute;
+  top: 10px;
+  right: 70px;
+  -webkit-border-radius: 10px;
+}
+
+#explanation h3 {
+  padding: 5px 0;
+}
+
+#explanation ul {
+  padding: 5px 35px;
+  list-style-type: square;
+}
+
 .tweet {
   margin: 5px 0;
   padding: 5px;

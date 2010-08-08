@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Streamer Sample</title>
+    <meta charset="UTF-8" />
+    <script src="jquery-1.4.2.min.js"></script>
+    <script src="pusher.min.js"></script>
+    <script src="reciever.js"></script>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container">
+      <img id="logo" src="logo.jpg" alt="RubyKaigi2010" />
+      <div id="notice">
+        日本Ruby会議2010実行委員会からのお知らせ
+      </div>
+      <div id="ustream">
+        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="320" id="utv774102"><param name="flashvars" value="autoplay=false&amp;brand=embed&amp;cid=975693&amp;locale=en_US"/><param name="allowfullscreen" value="true"/><param name="allowscriptaccess" value="always"/><param name="movie" value="http://www.ustream.tv/flash/live/1/975693"/><embed flashvars="autoplay=false&amp;brand=embed&amp;cid=975693&amp;locale=en_US" width="400" height="320" allowfullscreen="true" allowscriptaccess="always" id="utv774102" name="utv_n_609618" src="http://www.ustream.tv/flash/live/1/975693" type="application/x-shockwave-flash" /></object>
+        <div id="explanation">
+          <h3>IRC情報</h3>
+          <ul>
+            <li>サーバ: irc.freenode.net:6667</li>
+            <li>チャネル: #rubykaigi1</li>
+            <li>文字コード: UTF-8</li>
+          </ul>
+          <h3>その他</h3>
+          <ul>
+            <li>KaigiFreaksがお届けします</li>
+            <li>中継品質はベストエフォートです</li>
+            <li>中継とは別に、録画した動画も公開予定です</li>
+          </ul>
+        </div>
+      </div>
+      <div id="stream"></div>
+    </div>
+  </body>
+</html>
