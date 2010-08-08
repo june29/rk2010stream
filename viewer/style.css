@@ -22,17 +22,6 @@ body {
   opacity: 0.8;
 }
 
-#notice .message {
-  padding: 0 10px;
-}
-
-#notice .timestamp {
-  font-size: 90%;
-}
-
-#stream {
-}
-
 .tweet {
   margin: 5px 0;
   padding: 5px;

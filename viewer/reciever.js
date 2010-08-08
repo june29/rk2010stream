@@ -88,9 +88,6 @@ $(document).ready(function() {
 
     div.append($("<span/>").hide()
                .addClass("message")
-               .text(body).fadeIn(2000))
-       .append($("<span/>").hide()
-               .addClass("timestamp")
-               .text("(updated at: " + updated_at + ")").fadeIn(2000));
+               .text(body + " (updated: " + updated_at + ")").fadeIn(2000));
   });
 });
