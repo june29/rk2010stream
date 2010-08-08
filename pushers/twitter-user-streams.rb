@@ -64,7 +64,7 @@ def connect_user_stream(login, password, logger, uri=nil, &block)
   }
 end
 
-logger = Logger.new(STDERR)
+logger = Logger.new(STDOUT)
 
 account = Pit.get("rk2010stream", :require => {
                     "twitter-username" => "Twitter username",
@@ -80,6 +80,11 @@ Pusher.secret = account["pusher-secret"]
 
 connect_user_stream(account["twitter-username"], account["twitter-password"], logger) do |data|
   json = JSON.parse(data)
-  logger.info("[@%s] %s" % [json["user"]["screen_name"], json["text"]]) if json["user"]
-  Pusher["stream"].trigger("twitter", :data => json)
+
+  if json["user"]
+    logger.info("[%s][@%s] %s" % [json["user"]["protected"] ? "P" : " ",
+                                  json["user"]["screen_name"],
+                                  json["text"]])
+    Pusher["stream"].trigger("twitter", :data => json) unless json["user"]["protected"]
+  end
 end
