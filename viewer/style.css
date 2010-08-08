@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+}
+
+#container {
+  width: 1000px;
+  height: 800px;
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  margin: auto;
+  padding: 10px;
+}
+
+#notice {
+  padding: 5px 20px;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+#notice .timestamp {
+  font-size: 70%;
+}
+
+#stream {
+}
+
+.tweet {
+  margin: 5px 0;
+  padding: 5px;
+  font-size: 80%;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  opacity: 0.8;
+}
+
+.irc {
+  margin: 5px 0;
+  padding: 5px;
+  font-size: 80%;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  opacity: 0.8;
+}
+
+.created_at {
+  font-size: 70%;
+  color: #666;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+.object {
+}
+
+.object, .target {
+  text-align: right;
+}
+
+.source img, .target img {
+  vertical-align: middle;
+}
+
+.screen_name {
+  padding: 0 5px;
+}
