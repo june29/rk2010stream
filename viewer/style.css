@@ -53,6 +53,7 @@ body {
   padding: 5px;
   font-size: 80%;
   background-color: #fff;
+  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   opacity: 0.8;
 }
@@ -62,6 +63,7 @@ body {
   padding: 5px;
   font-size: 80%;
   background-color: #fff;
+  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   opacity: 0.8;
 }
