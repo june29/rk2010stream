@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  WebSocket.__swfLocation = "WebSocketMain.swf";
+
   var capacity  = 20;
   var icon_size = 36;
 
