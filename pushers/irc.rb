@@ -31,7 +31,8 @@ class IRCPusher < Net::IRC::Client
     nick = m.prefix.nick.to_s
     created_at = Time.now.strftime("%Y/%m/%d %H:%M:%S")
 
-    Pusher["stream"].trigger("irc", :body => { :nick => nick, :text => message, :created_at => created_at })
+    Pusher["stream"].trigger("irc-%s" % channel.sub(/^#/, "").downcase,
+                             :body => { :nick => nick, :text => message, :created_at => created_at })
   end
 end
 
