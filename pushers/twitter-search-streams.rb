@@ -30,10 +30,10 @@ EventMachine::run {
              )
 
     stream.each_item do |status|
-      json = Yajl.load(status)
-      logger.info("[@%s] %s" % [json["user"]["screen_name"], json["text"]])
+      tweet = Yajl.load(status)
+      logger.info("[@%s] %s" % [tweet["user"]["screen_name"], tweet["text"]])
 
-      Pusher["stream"].trigger("twitter", :data => json)
+      Pusher["stream"].trigger("twitter", :data => tweet)
     end
   }
 }

@@ -82,9 +82,10 @@ connect_user_stream(account["twitter-username"], account["twitter-password"], lo
   json = JSON.parse(data)
 
   if json["user"]
-    logger.info("[%s][@%s] %s" % [json["user"]["protected"] ? "P" : " ",
-                                  json["user"]["screen_name"],
-                                  json["text"]])
-    Pusher["stream"].trigger("twitter", :data => json) unless json["user"]["protected"]
+    tweet = json
+    logger.info("[%s][@%s] %s" % [tweet["user"]["protected"] ? "P" : " ",
+                                  tweet["user"]["screen_name"],
+                                  tweet["text"]])
+    Pusher["stream"].trigger("twitter", :data => tweet) unless tweet["user"]["protected"]
   end
 end
