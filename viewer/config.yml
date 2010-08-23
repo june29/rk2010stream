@@ -1,0 +1,12 @@
+video1:
+  channel: rubykaigi-1
+  receiver: receiver1.js
+  embed: <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="320" id="utv774102"><param name="flashvars" value="autoplay=false&amp;brand=embed&amp;cid=975693&amp;locale=en_US"/><param name="allowfullscreen" value="true"/><param name="allowscriptaccess" value="always"/><param name="movie" value="http://www.ustream.tv/flash/live/1/975693"/><embed flashvars="autoplay=false&amp;brand=embed&amp;cid=975693&amp;locale=en_US" width="400" height="320" allowfullscreen="true" allowscriptaccess="always" id="utv774102" name="utv_n_609618" src="http://www.ustream.tv/flash/live/1/975693" type="application/x-shockwave-flash" /></object>
+video2:
+  channel: rubykaigi-2
+  receiver: receiver2.js
+  embed: <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="320" id="utv653256"><param name="flashvars" value="autoplay=false&amp;brand=embed&amp;cid=975697&amp;locale=en_US"/><param name="allowfullscreen" value="true"/><param name="allowscriptaccess" value="always"/><param name="movie" value="http://www.ustream.tv/flash/live/1/975697"/><embed flashvars="autoplay=false&amp;brand=embed&amp;cid=975697&amp;locale=en_US" width="400" height="320" allowfullscreen="true" allowscriptaccess="always" id="utv653256" name="utv_n_607900" src="http://www.ustream.tv/flash/live/1/975697" type="application/x-shockwave-flash" /></object>
+video3:
+  channel: rubykaigi-3
+  receiver: receiver3.js
+  embed: <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="320" id="utv964114"><param name="flashvars" value="autoplay=false&amp;brand=embed&amp;cid=975700&amp;locale=en_US"/><param name="allowfullscreen" value="true"/><param name="allowscriptaccess" value="always"/><param name="movie" value="http://www.ustream.tv/flash/live/1/975700"/><embed flashvars="autoplay=false&amp;brand=embed&amp;cid=975700&amp;locale=en_US" width="400" height="320" allowfullscreen="true" allowscriptaccess="always" id="utv964114" name="utv_n_676980" src="http://www.ustream.tv/flash/live/1/975700" type="application/x-shockwave-flash" /></object>

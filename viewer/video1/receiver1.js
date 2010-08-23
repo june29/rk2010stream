@@ -57,7 +57,7 @@ $(document).ready(function() {
     }
   });
 
-  stream.bind("irc-rubykaigi2010", function(message) {
+  stream.bind("irc-rubykaigi-1", function(message) {
     var data       = message.body;
     var nick       = data.nick;
     var text       = data.text;

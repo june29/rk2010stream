@@ -57,7 +57,7 @@ $(document).ready(function() {
     }
   });
 
-  stream.bind("irc-rubykaigi2010", function(message) {
+  stream.bind("irc-%s", function(message) {
     var data       = message.body;
     var nick       = data.nick;
     var text       = data.text;
@@ -68,7 +68,7 @@ $(document).ready(function() {
       .append($("<p/>")
               .append($("<img/>")
                       .addClass("icon")
-                      .attr({ src: "../irc.png", alt: "irc", width: icon_size, height: icon_size }))
+                      .attr({ src: "irc.png", alt: "irc", width: icon_size, height: icon_size }))
               .append($("<span/>")
                       .addClass("screen_name")
                       .text(nick + ":"))

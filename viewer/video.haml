@@ -1,0 +1,27 @@
+!!! 5
+%html{ :lang => "ja" }
+  %head
+    %title RubyKaigi2010 Streamer
+    %meta{ :charset => "UTF-8" }
+    %script{ :src => "../jquery-1.4.2.min.js" }
+    %script{ :src => "../pusher.min.js" }
+    %script{ :src => receiver }
+    %link{ :href => "../style.css", :rel => "stylesheet" }
+  %body
+    #container
+      %img#logo{ :src => "../logo.jpg", :alt => "RubyKaigi2010" }
+      #notice 日本Ruby会議2010実行委員会からのお知らせ
+      #ustream
+        %div= embed
+        #explanation
+          %h3 IRC情報
+          %ul
+            %li サーバ: irc.freenode.net:6667
+            %li チャネル: ##{channel}
+            %li 文字コード: UTF-8
+          %h3 その他
+          %ul
+            %li KaigiFreaksがお届けします
+            %li 中継品質はベストエフォートです
+            %li 中継とは別に、録画した動画も公開予定です
+      #stream
