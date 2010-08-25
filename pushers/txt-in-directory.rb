@@ -2,8 +2,10 @@ require "rubygems"
 require "pit"
 require "pusher"
 
-directory = ARGV.shift
+directory = ARGV[0]
 raise "please give a target directory" if directory.nil?
+
+interval = (ARGV[1] || 15).to_i
 
 account = Pit.get("rk2010stream", :require => {
                     "pusher-app-id"    => "Pusher app id",
@@ -29,7 +31,7 @@ loop do
     Pusher["notice"].trigger("text", :data => { :body => body, :updated_at => updated_at })
     previous = picked
 
-    sleep 5
+    sleep interval
   rescue => e
     logger.error(e)
   end
